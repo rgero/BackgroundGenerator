@@ -7,11 +7,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
 
-    public static void exportFile(Graphics2D graphic, BufferedImage image){
+    private static void exportFile(Graphics2D graphic, BufferedImage image){
         long currentTime = System.currentTimeMillis();
         String fileExtension = "png";
         String fileName;
@@ -37,11 +38,11 @@ public class Main {
         int posX = 0;
         int posY = 0;
 
-        int numberTrianglesX = 20;
-        int numberTrianglesY = 20;
+        int width = 3*16;
+        int height = 3 * 9;
 
-        int width = screenWidth / numberTrianglesX;
-        int height = screenHeight / numberTrianglesY;
+        int numberTrianglesX = screenWidth/width;
+        int numberTrianglesY = screenHeight / height;
 
         for(int i = 0; i < numberTrianglesX; i++){
             for( int j = 0; j < numberTrianglesY; j++){
@@ -71,16 +72,14 @@ public class Main {
         graphic.fillRect(0,0, screenWidth, screenHeight);
 
         int colorCounter = 0;
-        Color[] colorCho = new Color[]{Color.BLACK, Color.GREEN, Color.YELLOW, Color.BLUE};
+        Color[] colorCho = new Color[]{Color.BLACK, Color.GREEN, Color.YELLOW, Color.BLUE, Color.red};
+
+        Random rand = new Random();
 
         for(Triangle i : triangleList){
-            graphic.setColor(colorCho[colorCounter]);
+            graphic.setColor(colorCho[rand.nextInt(colorCho.length)]);
             graphic.fill(new Polygon(i.getXPoints(), i.getYPoints(), i.getXPoints().length));
-            if (colorCounter < colorCho.length - 1){
-                colorCounter++;
-            } else {
-                colorCounter=0;
-            }
+
         }
         exportFile(graphic, image);
 
