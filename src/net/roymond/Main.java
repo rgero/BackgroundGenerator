@@ -30,38 +30,51 @@ public class Main {
 
 
     public static void main(String[] args) {
+        Random rand = new Random();
+
         List<Triangle> triangleList = new ArrayList<>();
-        int startsWith = 2;
+        int triangleNumber = 1;
+
+        // If the line is odd, start with 1
+        // Else it'll be 3. (see graphic in readme)
         boolean oddLine = true;
+
+        //Screen Resolution
         int screenWidth = 1920;
         int screenHeight = 1080;
+
+        //Screen Position
         int posX = 0;
         int posY = 0;
 
-        int width = 3*16;
-        int height = 3 * 9;
+        //Properties of the Triangle
+        int triangleWidth = 3*16;
+        int triangleHeight = 3 * 9;
 
-        int numberTrianglesX = screenWidth/width;
-        int numberTrianglesY = screenHeight / height;
+        while( posX < screenWidth ) {
+            while ( posY < screenHeight ){
+                triangleList.add( new Triangle( triangleNumber,posX, posY,triangleWidth, triangleHeight ));
 
-        for(int i = 0; i < numberTrianglesX; i++){
-            for( int j = 0; j < numberTrianglesY; j++){
-                triangleList.add(new Triangle(startsWith,posX, posY,width, height));
-                if(startsWith < 4){
-                    startsWith++;
+                //Establishes the next triangle
+                // Right now, there are only four of them. When it is greater than 4
+                // It resets.
+                if(triangleNumber > 4){
+                    triangleNumber = 1;
+                    posY += triangleHeight;
                 } else {
-                    startsWith = 1;
-                }
-                if( j % 2 == 0){
-                    posY += height;
+                    triangleNumber++;
+                    if (triangleNumber == 3 ){
+                        posY += triangleHeight;
+                    }
                 }
             }
-            posX += width;
+            posX += triangleWidth;
             posY = 0;
+
             if (oddLine){
-                startsWith = 1;
+                triangleNumber = 1;
             } else {
-                startsWith = 2;
+                triangleNumber = 3;
             }
             oddLine = !oddLine;
         }
@@ -74,7 +87,7 @@ public class Main {
         int colorCounter = 0;
         Color[] colorCho = new Color[]{Color.BLACK, Color.GREEN, Color.YELLOW, Color.BLUE, Color.red};
 
-        Random rand = new Random();
+
 
         for(Triangle i : triangleList){
             graphic.setColor(colorCho[rand.nextInt(colorCho.length)]);
