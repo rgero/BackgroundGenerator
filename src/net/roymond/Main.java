@@ -47,6 +47,9 @@ public class Main {
         int posX = 0;
         int posY = 0;
 
+        Color previousColor =  Color.white;
+        Color currentColor = Color.white;
+
         //Properties of the Triangle
         int triangleWidth = 3*16;
         int triangleHeight = 3 * 9;
@@ -85,14 +88,18 @@ public class Main {
         graphic.fillRect(0,0, screenWidth, screenHeight);
 
         int colorCounter = 0;
-        Color[] colorCho = new Color[]{Color.BLACK, Color.GREEN, Color.YELLOW, Color.BLUE, Color.red};
+        Color[] colorCho = new Color[]{new Color(60,79,133), new Color(46,67,118),
+                new Color(31,48,89), new Color(18,31,70), new Color(11,9,46)};
 
 
 
         for(Triangle i : triangleList){
-            graphic.setColor(colorCho[rand.nextInt(colorCho.length)]);
+            while( currentColor.equals(previousColor) ){
+                currentColor = colorCho[rand.nextInt(colorCho.length)];
+            }
+            graphic.setColor( currentColor );
             graphic.fill(new Polygon(i.getXPoints(), i.getYPoints(), i.getXPoints().length));
-
+            previousColor = currentColor;
         }
         exportFile(graphic, image);
 
