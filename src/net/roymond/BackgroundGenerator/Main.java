@@ -83,6 +83,35 @@ public class Main {
         return squareList;
     }
 
+    private static List<Shape> processDiamondList(int width, int height, int screenWidth, int screenHeight){
+        List<Shape> diamondList = new ArrayList<>();
+        int posX=0;
+        int posY=0;
+        boolean nextLineOdd = true;
+
+        // I need to account for the fact that diamonds don't fit in rectangles
+        // I do this by adding one unit of width and height to the while loop.
+        int targetWidth = screenWidth + width;
+        int targetHeight = screenHeight + height;
+        while( posX < targetWidth ) {
+            while (posY < targetHeight) {
+                diamondList.add( new Diamond(posX,posY,width,height) );
+                posY += height;
+            }
+            posX += width/2;
+
+            // This check allows for the program to offset the correct distance
+            // for odd lines.
+            if (nextLineOdd){
+                posY = height/2;
+            } else {
+                posY = 0;
+            }
+            nextLineOdd = !nextLineOdd;
+        }
+        return diamondList;
+    }
+
     public static void main(String[] args) {
         Random rand = new Random();
 
@@ -98,20 +127,21 @@ public class Main {
         Color currentColor = Color.white;
 
         //Properties of the shape
-        int width = 16;
-        int height = 3 * 9;
+        int width = 16*3;
+        int height = 16*2;
 
         //Here is a triangle example
         // List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
-        List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
+        //List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
+        List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphic = image.createGraphics();
-        graphic.setColor( Color.GRAY );
+        graphic.setColor( Color.WHITE );
         graphic.fillRect(0,0, screenWidth, screenHeight);
 
-        Color[] colorCho = new Color[]{new Color(70,99,37), new Color(49,45,7),
-                new Color(195,193,137), new Color(131,131,114), new Color(11,11,7)};
+        Color[] colorCho = new Color[]{new Color(35,193,227), new Color(59,154,182),
+                new Color(44,113,139), new Color(40,64,116), new Color(26,10,77)};
 
         for(Shape i : objectList){
             while( currentColor.equals(previousColor) ){
