@@ -68,6 +68,21 @@ public class Main {
         return triangleList;
     }
 
+    private static List<Shape> processSquareList(int width, int screenWidth, int screenHeight){
+        List<Shape> squareList = new ArrayList<>();
+        int posX=0;
+        int posY=0;
+        while( posX < screenWidth ) {
+            while (posY < screenHeight) {
+                squareList.add( new Square(posX, posY, width) );
+                posY += width;
+            }
+            posX += width;
+            posY = 0;
+        }
+        return squareList;
+    }
+
     public static void main(String[] args) {
         Random rand = new Random();
 
@@ -83,11 +98,12 @@ public class Main {
         Color currentColor = Color.white;
 
         //Properties of the shape
-        int width = 3*16;
+        int width = 16;
         int height = 3 * 9;
 
         //Here is a triangle example
-        List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
+        // List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
+        List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphic = image.createGraphics();
