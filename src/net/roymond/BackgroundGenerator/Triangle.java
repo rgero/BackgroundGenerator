@@ -1,7 +1,6 @@
-package net.roymond;
+package net.roymond.BackgroundGenerator;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Triangle Class

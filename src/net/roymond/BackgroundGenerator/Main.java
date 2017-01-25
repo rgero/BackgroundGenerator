@@ -1,4 +1,4 @@
-package net.roymond;
+package net.roymond.BackgroundGenerator;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

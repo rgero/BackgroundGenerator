@@ -1,4 +1,4 @@
-package net.roymond;
+package net.roymond.BackgroundGenerator;
 
 import java.util.Collections;
 import java.util.List;
