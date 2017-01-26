@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="And now there are diamonds. Simple Shapes are fun!">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Diamond.java" />
+    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Implemented the &quot;addNoise&quot; functionality. Right now the main function will export the image before and after the noise.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" />
     </list>
@@ -25,21 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="102" column="71" lean-forward="false" selection-start-line="102" selection-start-column="71" selection-end-line="102" selection-end-column="71" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Diamond.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Diamond.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+            <state relative-caret-position="226">
+              <caret line="147" column="11" lean-forward="false" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -77,8 +66,9 @@
         <option value="$PROJECT_DIR$/src/net/roymond/Main.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Point.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Square.java" />
-        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" />
+        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Shape.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Diamond.java" />
+        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" />
       </list>
     </option>
   </component>
@@ -103,6 +93,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -135,9 +126,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -383,17 +373,24 @@
       <option name="project" value="LOCAL" />
       <updated>1485359110557</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="And now there are diamonds. Simple Shapes are fun!">
+      <created>1485360230106</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1485360230106</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1618" height="1184" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2897998" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2897998" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -438,7 +435,8 @@
     <MESSAGE value="Updating the package name" />
     <MESSAGE value="Added the Square class. I'd love to try and make the function call in Main generic enough so I can just swap in and out the shapes I want to generate" />
     <MESSAGE value="And now there are diamonds. Simple Shapes are fun!" />
-    <option name="LAST_COMMIT_MESSAGE" value="And now there are diamonds. Simple Shapes are fun!" />
+    <MESSAGE value="Implemented the &quot;addNoise&quot; functionality. Right now the main function will export the image before and after the noise." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented the &quot;addNoise&quot; functionality. Right now the main function will export the image before and after the noise." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -451,29 +449,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485214753646.png" />
-    <entry file="file://$PROJECT_DIR$/1485214818422.png" />
-    <entry file="file://$PROJECT_DIR$/1485214849470.png" />
-    <entry file="file://$PROJECT_DIR$/1485214887875.png" />
-    <entry file="file://$PROJECT_DIR$/1485214900441.png" />
-    <entry file="file://$PROJECT_DIR$/1485224742508.png" />
-    <entry file="file://$PROJECT_DIR$/1485224977037.png" />
     <entry file="file://$PROJECT_DIR$/1485225025466.png" />
     <entry file="file://$PROJECT_DIR$/1485225147039.png" />
     <entry file="file://$PROJECT_DIR$/1485276292096.png" />
@@ -499,41 +474,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485358727474.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485358785611.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485358830068.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485357851417.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485358878440.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485358897834.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485358912998.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/1485358727474.png" />
+    <entry file="file://$PROJECT_DIR$/1485358785611.png" />
+    <entry file="file://$PROJECT_DIR$/1485358830068.png" />
+    <entry file="file://$PROJECT_DIR$/1485358878440.png" />
+    <entry file="file://$PROJECT_DIR$/1485358897834.png" />
+    <entry file="file://$PROJECT_DIR$/1485358912998.png" />
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -550,90 +496,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/1485359650757.png" />
+    <entry file="file://$PROJECT_DIR$/1485359672851.png" />
+    <entry file="file://$PROJECT_DIR$/1485359799934.png" />
+    <entry file="file://$PROJECT_DIR$/1485359620002.png" />
+    <entry file="file://$PROJECT_DIR$/1485359834057.png" />
+    <entry file="file://$PROJECT_DIR$/1485359856553.png" />
+    <entry file="file://$PROJECT_DIR$/1485359881645.png" />
+    <entry file="file://$PROJECT_DIR$/1485359897894.png" />
+    <entry file="file://$PROJECT_DIR$/1485359970697.png" />
+    <entry file="file://$PROJECT_DIR$/1485359988088.png" />
+    <entry file="file://$PROJECT_DIR$/1485360024531.png" />
+    <entry file="file://$PROJECT_DIR$/1485360062804.png" />
+    <entry file="file://$PROJECT_DIR$/1485357851417.png" />
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Shape.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="41" column="8" lean-forward="false" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+        <state relative-caret-position="676">
+          <caret line="40" column="35" lean-forward="false" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
             <element signature="e#916#917#0" expanded="true" />
+            <marker date="1485442143313" expanded="true" signature="49:59" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359650757.png">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/NumberFormatException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="489">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1485366869094.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359672851.png">
+    <entry file="file://$PROJECT_DIR$/1485456060305.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359799934.png">
+    <entry file="file://$PROJECT_DIR$/1485456105693.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359620002.png">
+    <entry file="file://$PROJECT_DIR$/1485456107381.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359834057.png">
+    <entry file="file://$PROJECT_DIR$/1485456153033.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359856553.png">
+    <entry file="file://$PROJECT_DIR$/1485456154690.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359881645.png">
+    <entry file="file://$PROJECT_DIR$/1485458537109.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359897894.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Diamond.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="25" column="36" lean-forward="false" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/1485359970697.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485359988088.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485360024531.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1485360062804.png">
+    <entry file="file://$PROJECT_DIR$/1485458538285.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="102" column="71" lean-forward="false" selection-start-line="102" selection-start-column="71" selection-end-line="102" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Diamond.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state relative-caret-position="226">
+          <caret line="147" column="11" lean-forward="false" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
           <folding />
         </state>
       </provider>
