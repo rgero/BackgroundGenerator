@@ -192,21 +192,21 @@ public class Main {
         Color currentColor = Color.white;
 
         //Properties of the shape
-        int width = 16*3;
-        int height = 16*2;
+        int width = 16*4;
+        int height = 16*4;
 
         //Here is a triangle example
-        List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
+        //List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
         //List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
-        //List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
+        List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphic = image.createGraphics();
         graphic.setColor( Color.WHITE );
         graphic.fillRect(0,0, screenWidth, screenHeight);
 
-        Color[] colorCho = new Color[]{new Color(35,193,227), new Color(59,154,182),
-                new Color(44,113,139), new Color(40,64,116), new Color(26,10,77)};
+        Color[] colorCho = new Color[]{new Color(0,64,17), new Color(16,95,37),
+                new Color(42,127,64), new Color(79,159,100), new Color(127,191,144)};
 
         for(Shape i : objectList){
             while( currentColor.equals(previousColor) ){
@@ -216,7 +216,6 @@ public class Main {
             graphic.fill(new Polygon(i.getXPoints(), i.getYPoints(), i.getXPoints().length));
             previousColor = currentColor;
         }
-        exportFile(graphic, image);
 
         image = addNoise(rand, image, 35);
         exportFile(graphic, image);
