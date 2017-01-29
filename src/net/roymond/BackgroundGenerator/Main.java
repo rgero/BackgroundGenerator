@@ -81,21 +81,21 @@ public class Main {
 
     /***
      * Generates a background image based on Squares
-     * @param width - width of the square
+     * @param sideSize - width of the square
      * @param screenWidth - image width
      * @param screenHeight - image height
      * @return A list of Squares used to generate the image.
      */
-    private static List<Shape> processSquareList(int width, int screenWidth, int screenHeight){
+    private static List<Shape> processSquareList(int sideSize, int screenWidth, int screenHeight){
         List<Shape> squareList = new ArrayList<>();
         int posX=0;
         int posY=0;
         while( posX < screenWidth ) {
             while (posY < screenHeight) {
-                squareList.add( new Square(posX, posY, width) );
-                posY += width;
+                squareList.add( new Square(posX, posY, sideSize) );
+                posY += sideSize;
             }
-            posX += width;
+            posX += sideSize;
             posY = 0;
         }
         return squareList;
@@ -146,6 +146,12 @@ public class Main {
      * @return The edited image.
      */
     private static BufferedImage addNoise(Random r, BufferedImage img, int maxDistortion){
+        // If maxDistortion is less than 0, there is no point then going through this function
+        // So bail.
+        if (maxDistortion <= 0 ){
+            return img;
+        }
+
         int width = img.getWidth();
         int height = img.getHeight();
         for(int i = 0; i < width; i++){
@@ -202,6 +208,8 @@ public class Main {
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphic = image.createGraphics();
+
+
         graphic.setColor( Color.WHITE );
         graphic.fillRect(0,0, screenWidth, screenHeight);
 
