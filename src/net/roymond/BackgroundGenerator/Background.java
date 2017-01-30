@@ -33,7 +33,11 @@ class Background {
     private int maxDistortion;
     private Random rand;
 
-
+    /***
+     * This is the public constructor the Background class.
+     * @param w - the width of the image
+     * @param h - the height of the image
+     */
     Background(int w, int h){
         if (w > 0) {
             this.width = w;
@@ -55,22 +59,43 @@ class Background {
         chosenShape = ShapeEnum.NONE;
     }
 
+    /***
+     * Allows the user to set the color palette of the background
+     * @param colors - the colors in the palette
+     */
     void setColors(Color... colors){
         Collections.addAll(colorList, colors);
     }
 
+    /***
+     * Allows the user to set the desired shpae
+     * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
+     */
     void setShape( ShapeEnum s ){
         chosenShape = s;
     }
 
+    /***
+     * Sets the outline acceptable range. Look at "addOutlines"
+     * @param AR - the acceptable range. Anything under this value will not have an outline
+     */
     void setOutlineRange(int AR){
         this.outlineAR = AR;
     }
 
+    /***
+     * Sets the distortion range - Look at addNoise
+     * @param d - the maximum value the rgb values can differentiate from their parent.
+     */
     void setDistortion(int d){
         this.maxDistortion = d;
     }
 
+    /***
+     * Sets the object width and height
+     * @param w - width
+     * @param h - height
+     */
     void setObjectDim(int w, int h){
         this.objWidth = w;
         this.objHeight = h;
@@ -113,6 +138,9 @@ class Background {
         }
     }
 
+    /***
+     * Adds the Outlines
+     */
     private void addOutlines() {
         for(int i = 0; i < width; i++)
         {
@@ -182,6 +210,7 @@ class Background {
         return diamondList;
     }
 
+    //Processes the rectangles
     private List<Shape> processRectangleList(){
         List<Shape> squareList = new ArrayList<>();
         int posX=0;
@@ -197,6 +226,7 @@ class Background {
         return squareList;
     }
 
+    //Generates the triangles
     private List<Shape> processTriangleList(){
         List<Shape> triangleList = new ArrayList<>();
         int posX=0;

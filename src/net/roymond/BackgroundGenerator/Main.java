@@ -17,11 +17,12 @@ public class Main {
         int height = 16*4;
 
         Background test = new Background(screenWidth,screenWidth);
-        test.setShape(ShapeEnum.RECTANGLE);
+        test.setShape(ShapeEnum.TRIANGLE);
         test.setObjectDim(width,height);
         test.setColors(new Color(0,64,17), new Color(16,95,37),
                 new Color(42,127,64), new Color(79,159,100), new Color(127,191,144));
 
+        test.setOutlineRange(10);
         test.setDistortion(10);
         test.generate();
         test.export();
