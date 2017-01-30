@@ -183,6 +183,44 @@ public class Main {
         return img;
     }
 
+    private static BufferedImage addOutlines(BufferedImage img, int acceptableRange) {
+        int width = img.getWidth();
+        int height = img.getHeight();
+        for(int i = 0; i < width; i++)
+        {
+            for(int j = 0; j < height; j++){
+                if (i < width-1 && j < height - 1){
+                    Color pixelColor = new Color(img.getRGB(i,j));
+                    int red = pixelColor.getRed();
+                    int green = pixelColor.getGreen();
+                    int blue = pixelColor.getBlue();
+
+                    Color rightColor = new Color(img.getRGB(i+1,j));
+                    int r2 = rightColor.getRed();
+                    int g2 = rightColor.getGreen();
+                    int b2 = rightColor.getBlue();
+
+                    Color downColor = new Color(img.getRGB(i,j+1));
+                    int r3 = downColor.getRed();
+                    int g3 = downColor.getGreen();
+                    int b3 = downColor.getBlue();
+
+                    boolean r1T = Math.abs(red - r2) > acceptableRange;
+                    boolean g1T = Math.abs(green - g2) > acceptableRange;
+                    boolean b1T = Math.abs(blue - b2) > acceptableRange;
+                    boolean r2T = Math.abs(red - r2) > acceptableRange;
+                    boolean g2T = Math.abs(green - g3) > acceptableRange;
+                    boolean b2T = Math.abs(blue - b3) > acceptableRange;
+
+                    if (r1T | g1T | b1T | r2T | g2T | b2T){
+                        img.setRGB(i,j,Color.BLACK.getRGB());
+                    }
+                }
+            }
+        }
+        return img;
+    }
+
     public static void main(String[] args) {
         Random rand = new Random();
 
@@ -203,8 +241,8 @@ public class Main {
 
         //Here is a triangle example
         //List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
-        //List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
-        List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
+        List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
+        //List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
         Graphics2D graphic = image.createGraphics();
@@ -225,8 +263,11 @@ public class Main {
             previousColor = currentColor;
         }
 
-        image = addNoise(rand, image, 35);
+        image = addOutlines( image, 10);
         exportFile(graphic, image);
+
+        /*image = addNoise(rand, image, 35);
+        exportFile(graphic, image);*/
 
     }
 }
