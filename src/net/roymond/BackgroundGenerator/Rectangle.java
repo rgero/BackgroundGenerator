@@ -2,12 +2,12 @@ package net.roymond.BackgroundGenerator;
 
 import java.util.ArrayList;
 
-/** Square Class.
+/** Rectangle Class.
  * Created by gero on 1/25/2017.
  */
-class Square extends Shape {
+class Rectangle extends Shape {
 
-    Square(int topLeftX, int topLeftY, int width, int height){
+    Rectangle(int topLeftX, int topLeftY, int width, int height){
         super.width = width;
         super.height = height;
         super.boxX = topLeftX;

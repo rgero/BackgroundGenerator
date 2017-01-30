@@ -16,7 +16,7 @@ import java.util.Random;
  */
 
 enum ShapeEnum {
-    DIAMOND,SQUARE,TRIANGLE,NONE
+    DIAMOND,RECTANGLE,TRIANGLE,NONE
 }
 
 class Background {
@@ -182,13 +182,13 @@ class Background {
         return diamondList;
     }
 
-    private List<Shape> processSquareList(){
+    private List<Shape> processRectangleList(){
         List<Shape> squareList = new ArrayList<>();
         int posX=0;
         int posY=0;
         while( posX < width ) {
             while (posY < height) {
-                squareList.add( new Square(posX, posY, objWidth, objHeight) );
+                squareList.add( new Rectangle(posX, posY, objWidth, objHeight) );
                 posY += objHeight;
             }
             posX += objWidth;
@@ -253,8 +253,8 @@ class Background {
         List<Shape> objectList = new ArrayList<>();
         if( chosenShape == ShapeEnum.DIAMOND ){
             objectList = processDiamondList();
-        } else if (chosenShape == ShapeEnum.SQUARE){
-            objectList = processSquareList();
+        } else if (chosenShape == ShapeEnum.RECTANGLE){
+            objectList = processRectangleList();
         } else if (chosenShape == ShapeEnum.TRIANGLE){
             objectList = processTriangleList();
         }
