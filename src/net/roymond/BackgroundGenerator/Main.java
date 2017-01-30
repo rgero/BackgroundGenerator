@@ -213,7 +213,9 @@ public class Main {
                     boolean b2T = Math.abs(blue - b3) > acceptableRange;
 
                     if (r1T | g1T | b1T | r2T | g2T | b2T){
-                        img.setRGB(i,j,Color.BLACK.getRGB());
+                        if (!pixelColor.equals(Color.black) ) {
+                            img.setRGB(i, j, Color.BLACK.getRGB());
+                        }
                     }
                 }
             }
@@ -240,8 +242,8 @@ public class Main {
         int height = 16*4;
 
         //Here is a triangle example
-        //List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
-        List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
+        List<Shape> objectList = processTriangleList(width, height,screenWidth, screenHeight);
+        //List<Shape> objectList = processSquareList(width, screenWidth, screenHeight);
         //List<Shape> objectList = processDiamondList(width, height, screenWidth, screenHeight);
 
         BufferedImage image = new BufferedImage(screenWidth, screenHeight, BufferedImage.TYPE_INT_ARGB);
@@ -264,10 +266,8 @@ public class Main {
         }
 
         image = addOutlines( image, 10);
+        //image = addNoise(rand, image, 25);
         exportFile(graphic, image);
-
-        /*image = addNoise(rand, image, 35);
-        exportFile(graphic, image);*/
 
     }
 }
