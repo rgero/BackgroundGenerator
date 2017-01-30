@@ -7,9 +7,9 @@ import java.util.ArrayList;
  */
 class Square extends Shape {
 
-    Square(int topLeftX, int topLeftY, int width){
+    Square(int topLeftX, int topLeftY, int width, int height){
         super.width = width;
-        super.height = width;
+        super.height = height;
         super.boxX = topLeftX;
         super.boxY = topLeftY;
         super.pointList = new ArrayList<>();
