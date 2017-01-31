@@ -16,14 +16,14 @@ public class Main {
         int width = 16*4;
         int height = 16*4;
 
-        Background test = new Background(screenWidth,screenWidth);
-        test.setShape(ShapeEnum.TRIANGLE);
+        Background test = new Background(screenWidth,screenHeight);
+        test.setShape(ShapeEnum.DIAMOND);
         test.setObjectDim(width,height);
-        test.setColors(new Color(0,64,17), new Color(16,95,37),
-                new Color(42,127,64), new Color(79,159,100), new Color(127,191,144));
+        test.setColors(new Color(49,57,117), new Color(8,14,59),
+                new Color(24,31,88), new Color(83,90,146), new Color(125,131,176));
 
-        test.setOutlineRange(10);
-        test.setDistortion(10);
+
+        test.setDistortion(20);
         test.generate();
         test.export();
 
