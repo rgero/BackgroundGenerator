@@ -1,7 +1,10 @@
 package net.roymond.BackgroundGenerator;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 
@@ -26,6 +29,17 @@ public class Main {
         test.setDistortion(20);
         test.generate();
         test.export();
+
+
+        // Trying the outline functionality on a real image.
+        File inputFile = new File("/Users/roymond/Downloads/Test.jpg");
+        try {
+            BufferedImage sourceImage = ImageIO.read(inputFile);
+            Background importTest = new Background(sourceImage.getWidth(), sourceImage.getHeight());
+            importTest.addOutlineToExternalImg(sourceImage, 20);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

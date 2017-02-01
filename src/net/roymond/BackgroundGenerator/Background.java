@@ -178,6 +178,15 @@ class Background {
         }
     }
 
+    public void addOutlineToExternalImg(BufferedImage img, int acceptableRange){
+        this.img = img;
+        this.width = img.getWidth();
+        this.height = img.getHeight();
+        this.outlineAR = acceptableRange;
+        addOutlines();
+        export();
+    }
+
     /***
      * Generates a background image based on Diamonds
      */
