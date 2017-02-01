@@ -42,4 +42,10 @@ class Shape {
         Collections.addAll(pointList, points);
     }
 
+    int[] getCenter(){
+        int x = boxX + width/2;
+        int y = boxY + height/2;
+        return new int[]{x,y};
+    }
+
 }

@@ -58,5 +58,15 @@ class Triangle extends Shape {
 
     }
 
-
+    @Override
+    int[] getCenter() {
+        int x = boxX + width/2;
+        int y = boxY;
+        if (triangleShape == 1 || triangleShape == 4){
+            y += (int)((3.0/4)*height);
+        } else {
+            y += (int)((1.0/4)*height);
+        }
+        return new int[]{x,y};
+    }
 }
