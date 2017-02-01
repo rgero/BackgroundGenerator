@@ -27,16 +27,21 @@ public class Main {
 
 
         test.setDistortion(20);
-        test.generate();
-        test.export();
+        //test.generate();
+        //test.export();
 
 
         // Trying the outline functionality on a real image.
-        File inputFile = new File("/Users/roymond/Downloads/Test.jpg");
+        File inputFile = new File("C:\\Users\\gero\\Downloads\\Test.png");
         try {
             BufferedImage sourceImage = ImageIO.read(inputFile);
-            Background importTest = new Background(sourceImage.getWidth(), sourceImage.getHeight());
-            importTest.addOutlineToExternalImg(sourceImage, 20);
+            Background importTest = new Background();
+            importTest.setBaseImage(sourceImage);
+            importTest.setShape(ShapeEnum.NONE);
+            importTest.setObjectDim(width,height);
+            importTest.setDistortion(150);
+            importTest.generate();
+            importTest.export();
         } catch (IOException e) {
             e.printStackTrace();
         }

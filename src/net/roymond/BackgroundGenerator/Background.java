@@ -26,6 +26,7 @@ class Background {
     private int objWidth;
     private int objHeight;
     private BufferedImage img;
+    private boolean baseImage;
     private Graphics2D graphic;
     private List<Color> colorList;
     private ShapeEnum chosenShape;
@@ -57,6 +58,11 @@ class Background {
         graphic = img.createGraphics();
         rand = new Random();
         chosenShape = ShapeEnum.NONE;
+        baseImage = false;
+    }
+
+    Background(){
+        this(1920,1080);
     }
 
     /***
@@ -99,6 +105,27 @@ class Background {
     void setObjectDim(int w, int h){
         this.objWidth = w;
         this.objHeight = h;
+    }
+
+    /**
+     * This allows the user to set a base image. This image will be used as a color map;
+     * @param loadedImage - The loaded image.
+     */
+    void setBaseImage(BufferedImage loadedImage){
+        this.img = loadedImage;
+        this.graphic = img.createGraphics();
+        this.width = loadedImage.getWidth();
+        this.height = loadedImage.getHeight();
+        baseImage = true;
+    }
+
+    /**
+     * Clears the base image.
+     */
+    void clearBaseImage(){
+        this.img = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
+        this.graphic = img.createGraphics();
+        baseImage = false;
     }
 
     /***
@@ -176,15 +203,6 @@ class Background {
                 }
             }
         }
-    }
-
-    public void addOutlineToExternalImg(BufferedImage img, int acceptableRange){
-        this.img = img;
-        this.width = img.getWidth();
-        this.height = img.getHeight();
-        this.outlineAR = acceptableRange;
-        addOutlines();
-        export();
     }
 
     /***
@@ -278,8 +296,10 @@ class Background {
 
     private boolean validateValues(){
         boolean retVal = true;
-        if ( colorList.size() < 2 | chosenShape == ShapeEnum.NONE | objWidth <=0 | objHeight <=0 ){
-            retVal = false;
+        if(!baseImage) {
+            if (colorList.size() < 2 | objWidth <= 0 | objHeight <= 0) {
+                retVal = false;
+            }
         }
         return retVal;
     }
@@ -288,6 +308,7 @@ class Background {
     void generate(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
+            return;
         }
         List<Shape> objectList = new ArrayList<>();
         if( chosenShape == ShapeEnum.DIAMOND ){
@@ -302,8 +323,22 @@ class Background {
         Color currentColor = Color.white;
 
         for(Shape i : objectList){
-            while( currentColor.equals(previousColor) ){
-                currentColor = colorList.get(rand.nextInt(colorList.size()));
+            if(!baseImage) {
+                while (currentColor.equals(previousColor)) {
+                    currentColor = colorList.get(rand.nextInt(colorList.size()));
+                }
+            } else {
+                int[] center = i.getCenter();
+                int x = center[0];
+                if (x >= width) {
+                    x = width - 1;
+                }
+                int y = center[1];
+                if (y >= height) {
+                    y = height - 1;
+                }
+                currentColor = new Color(img.getRGB(x, y)); //NEED THE CENTER POINT.
+
             }
             graphic.setColor( currentColor );
             graphic.fill(new Polygon(i.getXPoints(), i.getYPoints(), i.getXPoints().length));
@@ -323,13 +358,14 @@ class Background {
     void export(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
+            return;
         }
         long currentTime = System.currentTimeMillis();
         String fileExtension = "png";
         String fileName;
         File outputFile;
 
-        fileName = String.valueOf(currentTime) + "." + fileExtension;
+        fileName = "Images\\" + String.valueOf(currentTime) + "." + fileExtension;
         outputFile = new File(fileName);
         graphic.drawImage(img, null, 0, 0);
         try {
