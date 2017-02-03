@@ -191,7 +191,7 @@ class Background {
                     boolean r1T = Math.abs(red - r2) > outlineAR;
                     boolean g1T = Math.abs(green - g2) > outlineAR;
                     boolean b1T = Math.abs(blue - b2) > outlineAR;
-                    boolean r2T = Math.abs(red - r2) > outlineAR;
+                    boolean r2T = Math.abs(red - r3) > outlineAR;
                     boolean g2T = Math.abs(green - g3) > outlineAR;
                     boolean b2T = Math.abs(blue - b3) > outlineAR;
 
