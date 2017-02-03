@@ -39,7 +39,7 @@ class Background {
      * @param w - the width of the image
      * @param h - the height of the image
      */
-    Background(int w, int h){
+    public Background(int w, int h){
         if (w > 0) {
             this.width = w;
         } else {
@@ -61,7 +61,7 @@ class Background {
         baseImage = false;
     }
 
-    Background(){
+    public Background(){
         this(1920,1080);
     }
 
@@ -69,7 +69,7 @@ class Background {
      * Allows the user to set the color palette of the background
      * @param colors - the colors in the palette
      */
-    void setColors(Color... colors){
+    public void setColors(Color... colors){
         Collections.addAll(colorList, colors);
     }
 
@@ -77,7 +77,7 @@ class Background {
      * Allows the user to set the desired shpae
      * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
      */
-    void setShape( ShapeEnum s ){
+    public void setShape( ShapeEnum s ){
         chosenShape = s;
     }
 
@@ -85,7 +85,7 @@ class Background {
      * Sets the outline acceptable range. Look at "addOutlines"
      * @param AR - the acceptable range. Anything under this value will not have an outline
      */
-    void setOutlineRange(int AR){
+    public void setOutlineRange(int AR){
         this.outlineAR = AR;
     }
 
@@ -93,7 +93,7 @@ class Background {
      * Sets the distortion range - Look at addNoise
      * @param d - the maximum value the rgb values can differentiate from their parent.
      */
-    void setDistortion(int d){
+    public void setDistortion(int d){
         this.maxDistortion = d;
     }
 
@@ -102,7 +102,7 @@ class Background {
      * @param w - width
      * @param h - height
      */
-    void setObjectDim(int w, int h){
+    public void setObjectDim(int w, int h){
         this.objWidth = w;
         this.objHeight = h;
     }
@@ -111,7 +111,7 @@ class Background {
      * This allows the user to set a base image. This image will be used as a color map;
      * @param loadedImage - The loaded image.
      */
-    void setBaseImage(BufferedImage loadedImage){
+    public void setBaseImage(BufferedImage loadedImage){
         this.img = loadedImage;
         this.graphic = img.createGraphics();
         this.width = loadedImage.getWidth();
@@ -122,7 +122,7 @@ class Background {
     /**
      * Clears the base image.
      */
-    void clearBaseImage(){
+    public void clearBaseImage(){
         this.img = new BufferedImage(width,height,BufferedImage.TYPE_INT_ARGB);
         this.graphic = img.createGraphics();
         baseImage = false;
@@ -305,7 +305,7 @@ class Background {
     }
 
 
-    void generate(){
+    public void generate(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
             return;
@@ -355,7 +355,7 @@ class Background {
 
     }
 
-    void export(){
+    public void export(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
             return;
