@@ -365,6 +365,9 @@ class Background {
         String fileName;
         File outputFile;
 
+        if (!(new File("Images").exists())) {
+            new File("Images").mkdir();
+        }
         fileName = "Images\\" + String.valueOf(currentTime) + "." + fileExtension;
         outputFile = new File(fileName);
         graphic.drawImage(img, null, 0, 0);
