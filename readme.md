@@ -14,4 +14,4 @@ Images from the tool will be coming soon. I am collecting a couple that I truly 
 - The ability to add noise to an existing image or newly created background
 
 ##### Images
-[[https://github.com/rgero/BackgroundGenerator_2017/tree/master/WikiImages/1.png|alt="An Example Background"]]
+For Images of this project, please look at the WikiImages folder.

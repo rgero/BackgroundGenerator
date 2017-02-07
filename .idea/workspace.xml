@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Added a check to see if the images directory exists.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Update to the gitignore to ignore the correct directories.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="ShapedImages.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
@@ -40,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
+              <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -134,8 +134,8 @@
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/BackgroundTest.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" />
-        <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -517,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1485964254234</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update to the gitignore to ignore the correct directories.">
+      <created>1486489927564</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1486489927564</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -585,7 +592,8 @@
     <MESSAGE value="Added the baseImage member as well as some functions for setting and clearing it. This member allows me to use the base image as a color palette for the background generator." />
     <MESSAGE value="Made the appropriate constructors and functions public so I can write tests for them." />
     <MESSAGE value="Added a check to see if the images directory exists." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a check to see if the images directory exists." />
+    <MESSAGE value="Update to the gitignore to ignore the correct directories." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update to the gitignore to ignore the correct directories." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -695,14 +703,6 @@
     <entry file="file://$PROJECT_DIR$/1486068684291.png" />
     <entry file="file://$PROJECT_DIR$/1485651988474.png" />
     <entry file="file://$PROJECT_DIR$/1485915355570.png" />
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="76" lean-forward="false" selection-start-line="16" selection-start-column="76" selection-end-line="16" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -718,6 +718,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
