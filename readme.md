@@ -12,3 +12,6 @@ Images from the tool will be coming soon. I am collecting a couple that I truly 
 - The ability to specify a color palette or use an existing image for one.
 - The ability to add outlines to an existing image or newly created background
 - The ability to add noise to an existing image or newly created background
+
+##### Images
+[[https://github.com/rgero/BackgroundGenerator_2017/tree/master/WikiImages/1.png|alt="An Example Background"]]
