@@ -23,12 +23,13 @@ public class SetupWindow {
     private JPanel shapePanel;
     private JRadioButton diamondShape;
     private JSpinner numberOfColorsField;
+    private JPanel ColorManagerPanel;
 
     private List<JPanel> listOfColors;
 
     SetupWindow(){
 
-        colorsPanel.setLayout(new BoxLayout(colorsPanel, BoxLayout.PAGE_AXIS));
+        ColorManagerPanel.setLayout(new BoxLayout(ColorManagerPanel, BoxLayout.Y_AXIS));
         listOfColors = new ArrayList<>();
 
         numberOfColorsField.setSize(70,5);
@@ -52,12 +53,12 @@ public class SetupWindow {
             System.out.println("Hello");
             ColorPanel newColor = new ColorPanel(String.format("Color %d", listOfColors.size()+1));
             listOfColors.add(newColor);
-            colorsPanel.add(newColor);
+            ColorManagerPanel.add(newColor);
         }
         while ( listOfColors.size() > desiredColors){
-            colorsPanel.remove(listOfColors.get(listOfColors.size()-1));
+            ColorManagerPanel.remove(listOfColors.get(listOfColors.size()-1));
             listOfColors.remove(listOfColors.size()-1);
         }
-        colorsPanel.updateUI();
+        ColorManagerPanel.updateUI();
     }
 }
