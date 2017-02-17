@@ -109,6 +109,10 @@ public class SetupWindow {
         shapeHeightDoc.setDocumentFilter(new IntFilter());
         PlainDocument shapeWidthDoc = (PlainDocument) shapeWidthField.getDocument();
         shapeWidthDoc.setDocumentFilter(new IntFilter());
+        PlainDocument distortionDoc = (PlainDocument) distortionTextField.getDocument();
+        distortionDoc.setDocumentFilter(new IntFilter());
+        PlainDocument outlineDoc = (PlainDocument) outlineToleranceTextField.getDocument();
+        outlineDoc.setDocumentFilter(new IntFilter());
 
         browseButton.setIcon(imgIcon);
         browseButton.addActionListener(e -> {

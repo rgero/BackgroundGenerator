@@ -1,18 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Refactoring: Moved all of the UI stuff to its own package.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/ShapeEnum.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/AboutDisplay.form" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/AboutDisplay.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/AboutDisplay.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/AboutDisplay.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/ColorPanel.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/IntFilter.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/IntFilter.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.form" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.form" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
+    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/Resources/about.html" afterPath="$PROJECT_DIR$/src/net/roymond/Resources/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
     </list>
     <ignored path="ShapedImages.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Background.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Background.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
+            <state relative-caret-position="1020">
               <caret line="375" column="36" lean-forward="false" selection-start-line="375" selection-start-column="36" selection-end-line="375" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -63,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetupWindow.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SetupWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2464">
-              <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
+            <state relative-caret-position="594">
+              <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,10 +190,10 @@
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/IntFilter.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java" />
-        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/ShapeEnum.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/Resources/about.html" />
+        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
       </list>
     </option>
   </component>
@@ -698,7 +689,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487353624812</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactoring: Moved all of the UI stuff to its own package.">
+      <created>1487354796673</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1487354796673</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -789,7 +787,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java</url>
-          <line>277</line>
+          <line>281</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -997,16 +995,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2464">
-          <caret line="29" column="34" lean-forward="false" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/Resources/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -1030,7 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
+        <state relative-caret-position="1020">
           <caret line="375" column="36" lean-forward="false" selection-start-line="375" selection-start-column="36" selection-end-line="375" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1038,6 +1026,16 @@
             <element signature="e#11052#11053#0" expanded="true" />
             <element signature="e#11095#11096#0" expanded="true" />
             <element signature="e#11131#11132#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="114" column="52" lean-forward="false" selection-start-line="114" selection-start-column="52" selection-end-line="114" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
