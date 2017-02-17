@@ -69,7 +69,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame aboutDisplay = new JFrame("AboutDisplay");
-                aboutDisplay.setTitle("About Roy's Chord Drawer");
+                aboutDisplay.setTitle("Roy's Background Generator");
                 aboutDisplay.setContentPane(new AboutDisplay().About);
                 aboutDisplay.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                 aboutDisplay.pack();

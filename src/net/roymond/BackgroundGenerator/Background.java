@@ -73,6 +73,8 @@ class Background {
         Collections.addAll(colorList, colors);
     }
 
+    public void setColors(List<Color> colors) { colorList.addAll(colors); }
+
     /***
      * Allows the user to set the desired shpae
      * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
