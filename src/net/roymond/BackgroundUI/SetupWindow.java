@@ -251,23 +251,30 @@ public class SetupWindow {
         }
 
         // Verify Shape Width and Height;
-        try {
-            shapeWidth = Integer.valueOf( shapeWidthField.getText() );
-            if (shapeWidth <= 0 ){
-                throw new Exception("Invalid value");
+        if (shape != ShapeEnum.NONE) {
+            try {
+                shapeWidth = Integer.valueOf(shapeWidthField.getText());
+                if (shapeWidth <= 0) {
+                    throw new Exception("Invalid value");
+                }
+            } catch (Exception e) {
+                errorMessage += "The width of your shape must be greater than zero.\n";
+                errors = true;
             }
-        } catch (Exception e){
-            errorMessage += "The width of your shape must be greater than zero.\n";
-            errors = true;
-        }
-        try {
-            shapeHeight = Integer.valueOf( shapeHeightField.getText() );
-            if (shapeHeight <= 0 ){
-                throw new Exception("Invalid value");
+            try {
+                shapeHeight = Integer.valueOf(shapeHeightField.getText());
+                if (shapeHeight <= 0) {
+                    throw new Exception("Invalid value");
+                }
+            } catch (Exception e) {
+                errorMessage += "The height of your shape must be greater than zero.\n";
+                errors = true;
             }
-        } catch (Exception e){
-            errorMessage += "The height of your shape must be greater than zero.\n";
-            errors = true;
+
+            if( sourceImage == null){
+                errorMessage += "Shape Type Error - None is selected, but no source image is loaded.\n";
+                errors = true;
+            }
         }
 
         // Verify the export directory.
