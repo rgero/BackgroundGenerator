@@ -1,6 +1,9 @@
 package net.roymond.BackgroundGenerator;
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -38,6 +41,11 @@ public class SetupWindow {
     private JPanel shapePanel;
     private JTextField distortionTextField;
     private JTextField outlineToleranceTextField;
+    private JPanel customImagePanel;
+    private JCheckBox loadCustom;
+    private JPanel customDetails;
+    private JTextField imageTextField;
+    private JButton imageBrowse;
     private ButtonGroup shapeGroup;
 
     private String exportDir;
@@ -64,12 +72,39 @@ public class SetupWindow {
 
         });
 
+        customDetails.setVisible(false); //This is false by default because the checkbox is not selected.
+        loadCustom.addActionListener(e -> {
+            if (loadCustom.isSelected()){
+                customDetails.setVisible(true);
+                toggleReadOnlyOptions();
+
+            } else {
+                customDetails.setVisible(false);
+                toggleReadOnlyOptions();
+            }
+        });
+
+        //Setting up the custom details panel
+        ImageIcon imgIcon = new ImageIcon(new ImageIcon(ClassLoader.getSystemResource("net/roymond/Resources/FolderIcon.png")).getImage().getScaledInstance(16,16,Image.SCALE_DEFAULT));
+        imageBrowse.setIcon(imgIcon);
+        imageBrowse.addActionListener(e -> {
+            JFileChooser chooser = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                    "PNG and JPG Files", "png", "jpg");
+            chooser.setFileFilter(filter);
+            chooser.setAcceptAllFileFilterUsed(false);
+            int returnVal = chooser.showOpenDialog(SetupPanel);
+            if(returnVal == JFileChooser.APPROVE_OPTION) {
+                imageTextField.setText( chooser.getSelectedFile().getAbsolutePath() );
+            }
+        });
+
+
         PlainDocument shapeHeightDoc = (PlainDocument) shapeHeightField.getDocument();
         shapeHeightDoc.setDocumentFilter(new IntFilter());
         PlainDocument shapeWidthDoc = (PlainDocument) shapeWidthField.getDocument();
         shapeWidthDoc.setDocumentFilter(new IntFilter());
 
-        ImageIcon imgIcon = new ImageIcon(new ImageIcon(ClassLoader.getSystemResource("net/roymond/Resources/FolderIcon.png")).getImage().getScaledInstance(16,16,Image.SCALE_DEFAULT));
         browseButton.setIcon(imgIcon);
         browseButton.addActionListener(e -> {
             JFileChooser exportDirChooser = new JFileChooser();
@@ -214,6 +249,17 @@ public class SetupWindow {
 
 
 
+
+    }
+
+    private void toggleReadOnlyOptions(){
+
+        widthInputField.setEnabled( !widthInputField.isEnabled() );
+        heightInputField.setEnabled( !heightInputField.isEnabled() );
+        numberOfColorsField.setEnabled( !numberOfColorsField.isEnabled() );
+        for (ColorPanel i : listOfColorPanels ){
+            i.setEnabled( !i.isEnabled() );
+        }
 
     }
 

@@ -80,6 +80,14 @@ class ColorPanel extends JPanel {
         return colorName.getText();
     }
 
+    @Override
+    public void setEnabled(boolean isEnabled){
+        super.setEnabled(isEnabled);
+        redTextField.setEnabled(isEnabled);
+        greenTextField.setEnabled(isEnabled);
+        blueTextField.setEnabled(isEnabled);
+    }
+
     void clear(){
         redTextField.setText("");
         greenTextField.setText("");
