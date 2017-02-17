@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Added the ability to load the file and the necessary validations.">
+    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Added the ability to export to a specific directory / file name.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java" />
     </list>
     <ignored path="ShapedImages.iws" />
@@ -28,23 +29,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Background.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Background.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="384" column="44" lean-forward="true" selection-start-line="384" selection-start-column="44" selection-end-line="384" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#11140#11141#0" expanded="true" />
+                <element signature="e#11176#11177#0" expanded="true" />
+                <element signature="e#11219#11220#0" expanded="true" />
+                <element signature="e#11255#11256#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetupWindow.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SetupWindow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="266" column="36" lean-forward="false" selection-start-line="266" selection-start-column="36" selection-end-line="266" selection-end-column="36" />
+            <state relative-caret-position="679">
+              <caret line="276" column="20" lean-forward="true" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,18 +173,18 @@
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/IntFilter.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Main.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/Resources/about.html" />
-        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/ColorPanel.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.form" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java" />
+        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1591" />
+    <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1618" />
-    <option name="height" value="1218" />
+    <option name="height" value="1184" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -618,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1487341197345</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added the ability to load the file and the necessary validations.">
+      <created>1487342448084</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1487342448084</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -631,19 +643,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1591" y="-9" width="1618" height="1218" extended-state="6" />
+    <frame x="-9" y="-9" width="1618" height="1184" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28531855" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28503338" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28531855" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29456624" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983795" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -677,7 +689,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Making it so it is random colors. I am starting to figure out why it is deviating from what I am expecting so much." />
     <MESSAGE value="Made some improvements to the process so it actually generates each triangle properly. Also added comments." />
     <MESSAGE value="Created the Shape class and made Triangle inherit from it. This will allow me to implement other shapes for similar patterns." />
     <MESSAGE value="Updating the package name" />
@@ -702,14 +713,15 @@
     <MESSAGE value="Starting connecting the BackgroundGenerator to the SetupWindow." />
     <MESSAGE value="Adding the &quot;Use Image&quot; checkbox. This will make all non-necessary members read only." />
     <MESSAGE value="Added the ability to load the file and the necessary validations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to load the file and the necessary validations." />
+    <MESSAGE value="Added the ability to export to a specific directory / file name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the ability to export to a specific directory / file name." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java</url>
-          <line>269</line>
+          <line>274</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -729,6 +741,10 @@
           <caret line="370" column="31" lean-forward="false" selection-start-line="370" selection-start-column="31" selection-end-line="370" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11140#11141#0" expanded="true" />
+            <element signature="e#11176#11177#0" expanded="true" />
+            <element signature="e#11219#11220#0" expanded="true" />
+            <element signature="e#11255#11256#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -801,6 +817,10 @@
           <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11140#11141#0" expanded="true" />
+            <element signature="e#11176#11177#0" expanded="true" />
+            <element signature="e#11219#11220#0" expanded="true" />
+            <element signature="e#11255#11256#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -914,22 +934,26 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+        <state relative-caret-position="679">
+          <caret line="276" column="20" lean-forward="true" selection-start-line="276" selection-start-column="20" selection-end-line="276" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/SetupWindow.java">
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="266" column="36" lean-forward="false" selection-start-line="266" selection-start-column="36" selection-end-line="266" selection-end-column="36" />
+        <state relative-caret-position="228">
+          <caret line="384" column="44" lean-forward="true" selection-start-line="384" selection-start-column="44" selection-end-line="384" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#11140#11141#0" expanded="true" />
+            <element signature="e#11176#11177#0" expanded="true" />
+            <element signature="e#11219#11220#0" expanded="true" />
+            <element signature="e#11255#11256#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -5,10 +5,10 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Collections;
-import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * This is the background class.
@@ -32,6 +32,10 @@ class Background {
     private ShapeEnum chosenShape;
     private int outlineAR;
     private int maxDistortion;
+
+    private String exportDir;
+    private String fileName;
+
     private Random rand;
 
     /***
@@ -59,6 +63,8 @@ class Background {
         rand = new Random();
         chosenShape = ShapeEnum.NONE;
         baseImage = false;
+        fileName = null;
+        exportDir = null;
     }
 
     public Background(){
@@ -357,6 +363,14 @@ class Background {
 
     }
 
+    public void setExportDir(String dir){
+        this.exportDir = dir;
+    }
+
+    public void setFileName(String file){
+        this.fileName = file;
+    }
+
     public void export(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
@@ -364,14 +378,29 @@ class Background {
         }
         long currentTime = System.currentTimeMillis();
         String fileExtension = "png";
-        String fileName;
         File outputFile;
 
-        if (!(new File("Images").exists())) {
-            new File("Images").mkdir();
+        if (exportDir != null & !Objects.equals(exportDir, "")) {
+            if (!(new File(exportDir).exists())) {
+                new File(exportDir).mkdir();
+            }
+        } else {
+            exportDir = System.getProperty("user.dir");
         }
-        fileName = "Images\\" + String.valueOf(currentTime) + "." + fileExtension;
-        outputFile = new File(fileName);
+
+        if (fileName == null | Objects.equals(fileName, "")) {
+            fileName = String.valueOf(currentTime) + "." + fileExtension;
+        } else {
+            String regexPattern = ".png$";
+            Pattern r = Pattern.compile(regexPattern);
+            Matcher m = r.matcher(fileName);
+            if (!m.matches()){
+                fileName += ".png";
+            }
+        }
+
+        String completePath = exportDir + "\\" + fileName;
+        outputFile = new File(completePath);
         graphic.drawImage(img, null, 0, 0);
         try {
             ImageIO.write(img, fileExtension, outputFile);

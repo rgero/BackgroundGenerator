@@ -147,6 +147,8 @@ public class SetupWindow {
         int height = 0, shapeHeight = 0;
         int maxDistortion = 0, outlineTolerance = 0;
         List<Color> listOfColorValues = new ArrayList<>();
+        String directoryPath;
+        String fileName;
 
         boolean errors = false;
         String errorMessage = "";
@@ -261,6 +263,9 @@ public class SetupWindow {
             errors = true;
         }
 
+        // Verify the export directory.
+        directoryPath = directoryTextField.getText();
+        fileName = fileNameField.getText();
 
         if (!errors) {
             Background bg;
@@ -274,6 +279,8 @@ public class SetupWindow {
                 bg.setColors(listOfColorValues);
             }
             bg.setShape(shape);
+            bg.setExportDir(directoryPath);
+            bg.setFileName(fileName);
             bg.setObjectDim(shapeWidth, shapeHeight);
             bg.setDistortion(maxDistortion);
             bg.setOutlineRange(outlineTolerance);
