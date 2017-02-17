@@ -3,6 +3,8 @@ package net.roymond.BackgroundGenerator;
 import javax.swing.*;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +86,21 @@ public class SetupWindow {
         });
 
         exportButton.addActionListener(e -> generateBackground());
+
+        clearButton.addActionListener(e -> {
+            widthInputField.setText("");
+            heightInputField.setText("");
+            shapeGroup.clearSelection();
+            shapeHeightField.setText("");
+            shapeWidthField.setText("");
+            distortionTextField.setText("");
+            outlineToleranceTextField.setText("");
+            directoryTextField.setText("");
+            fileNameField.setText("");
+            for( ColorPanel i : listOfColorPanels){
+                i.clear();
+            }
+        });
     }
 
     private void generateBackground(){
@@ -191,7 +208,7 @@ public class SetupWindow {
             bg.generate();
             bg.export();
         } else {
-            JOptionPane.showMessageDialog(null, errorMessage);
+            JOptionPane.showMessageDialog(null, errorMessage, "Error(s) when attempting export", JOptionPane.ERROR_MESSAGE);
         }
 
 

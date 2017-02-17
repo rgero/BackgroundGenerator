@@ -80,5 +80,11 @@ class ColorPanel extends JPanel {
         return colorName.getText();
     }
 
+    void clear(){
+        redTextField.setText("");
+        greenTextField.setText("");
+        blueTextField.setText("");
+    }
+
 
 }
