@@ -1,5 +1,6 @@
 package net.roymond.BackgroundGenerator;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -8,6 +9,7 @@ import javax.swing.text.PlainDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -149,6 +151,61 @@ public class SetupWindow {
         boolean errors = false;
         String errorMessage = "";
 
+        // If loadCustom is selected, load image.
+        // else clause - verify image dimensions and selected colors.
+        BufferedImage sourceImage = null;
+        if ( loadCustom.isSelected() ){
+            try {
+                if (imageTextField.getText() != null){
+                    File file = new File(imageTextField.getText());
+                    if (file.isFile()) {
+                        sourceImage = ImageIO.read(file);
+                    } else {
+                        throw new Exception("Custom Image - Input file could not be found.");
+                    }
+                } else {
+                    throw new Exception("Custom Image - Input file not specified");
+                }
+
+            } catch( Exception e ){
+                errorMessage += e.getMessage();
+                errors = true;
+            }
+
+        } else {
+
+            // Verify Width and Height
+            try {
+                width = Integer.valueOf( widthInputField.getText() );
+                if (width <= 0 ){
+                    throw new Exception("Invalid value");
+                }
+            } catch (Exception e){
+                errorMessage += "The width of your image must be greater than zero.\n";
+                errors = true;
+            }
+            try {
+                height = Integer.valueOf( heightInputField.getText() );
+                if (height <= 0 ){
+                    throw new Exception("Invalid value");
+                }
+            } catch (Exception e){
+                errorMessage += "The height of your image must be greater than zero.\n";
+                errors = true;
+            }
+
+            // Verify Colors.
+            for (ColorPanel i : listOfColorPanels) {
+                Color c = i.getColorValues();
+                if (c == null) {
+                    errorMessage += String.format("%s - Issue with RGB values. Please check.\n", i.getName());
+                    errors = true;
+                } else {
+                    listOfColorValues.add(c);
+                }
+            }
+        }
+
         // Verify Inputs
         if (diamondShape.isSelected()){
             shape = ShapeEnum.DIAMOND;
@@ -160,25 +217,7 @@ public class SetupWindow {
             shape = ShapeEnum.NONE;
         }
 
-        // Verify Width and Height
-        try {
-            width = Integer.valueOf( widthInputField.getText() );
-            if (width <= 0 ){
-                throw new Exception("Invalid value");
-            }
-        } catch (Exception e){
-            errorMessage += "The width of your image must be greater than zero.\n";
-            errors = true;
-        }
-        try {
-            height = Integer.valueOf( heightInputField.getText() );
-            if (height <= 0 ){
-                throw new Exception("Invalid value");
-            }
-        } catch (Exception e){
-            errorMessage += "The height of your image must be greater than zero.\n";
-            errors = true;
-        }
+
 
         // Verify Distortion
         try {
@@ -222,20 +261,18 @@ public class SetupWindow {
             errors = true;
         }
 
-        //Getting and verifying color values
-        for( ColorPanel i : listOfColorPanels){
-            Color c = i.getColorValues();
-            if (c == null){
-                errorMessage += String.format("%s - Issue with RGB values. Please check.\n", i.getName());
-                errors = true;
-            } else {
-                listOfColorValues.add(c);
-            }
-        }
 
         if (!errors) {
-            Background bg = new Background(width, height);
-            bg.setColors(listOfColorValues);
+            Background bg;
+            if ( sourceImage != null ){
+                width = sourceImage.getWidth();
+                height = sourceImage.getHeight();
+                bg = new Background(width, height);
+                bg.setBaseImage(sourceImage);
+            } else {
+                bg = new Background(width, height);
+                bg.setColors(listOfColorValues);
+            }
             bg.setShape(shape);
             bg.setObjectDim(shapeWidth, shapeHeight);
             bg.setDistortion(maxDistortion);
