@@ -10,16 +10,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * This is the background class.
- * Created by gero on 1/30/2017.
- */
-
-enum ShapeEnum {
-    DIAMOND,RECTANGLE,TRIANGLE,NONE
-}
-
-class Background {
+public class Background {
 
     private int width;
     private int height;

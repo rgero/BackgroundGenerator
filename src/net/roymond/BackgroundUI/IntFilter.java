@@ -1,4 +1,4 @@
-package net.roymond.BackgroundGenerator;
+package net.roymond.BackgroundUI;
 
 import javax.swing.text.*;
 

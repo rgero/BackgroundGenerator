@@ -1,4 +1,7 @@
-package net.roymond.BackgroundGenerator;
+package net.roymond.BackgroundUI;
+
+import net.roymond.BackgroundGenerator.Background;
+import net.roymond.BackgroundGenerator.ShapeEnum;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -87,7 +90,7 @@ public class SetupWindow {
         });
 
         //Setting up the custom details panel
-        ImageIcon imgIcon = new ImageIcon(new ImageIcon(ClassLoader.getSystemResource("net/roymond/Resources/FolderIcon.png")).getImage().getScaledInstance(16,16,Image.SCALE_DEFAULT));
+        ImageIcon imgIcon = new ImageIcon(new ImageIcon(ClassLoader.getSystemResource("FolderIcon.png")).getImage().getScaledInstance(16,16,Image.SCALE_DEFAULT));
         imageBrowse.setIcon(imgIcon);
         imageBrowse.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();

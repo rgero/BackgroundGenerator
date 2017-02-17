@@ -1,4 +1,4 @@
-package net.roymond.BackgroundGenerator;
+package net.roymond.BackgroundUI;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,7 @@ public class AboutDisplay {
     AboutDisplay(){
         try {
             editPane.setContentType("text/html");
-            editPane.setPage(ClassLoader.getSystemResource("net/roymond/Resources/about.html"));
+            editPane.setPage(ClassLoader.getSystemResource("about.html"));
         } catch (IOException e) {
             editPane.setContentType("text/html");
             editPane.setText("<html>Could not load about document.</html>");

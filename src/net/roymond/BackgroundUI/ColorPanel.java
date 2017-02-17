@@ -1,4 +1,6 @@
-package net.roymond.BackgroundGenerator;
+package net.roymond.BackgroundUI;
+
+import net.roymond.BackgroundUI.IntFilter;
 
 import javax.swing.*;
 import javax.swing.text.PlainDocument;
