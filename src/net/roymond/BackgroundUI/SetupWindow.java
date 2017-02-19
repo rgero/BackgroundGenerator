@@ -5,13 +5,9 @@ import net.roymond.BackgroundGenerator.ShapeEnum;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.PlainDocument;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
@@ -21,7 +17,7 @@ import java.util.List;
  * The setup window for the background generator.
  * Created by Roymond on 2/16/2017.
  */
-public class SetupWindow {
+class SetupWindow {
     JPanel SetupPanel;
     private JPanel dimensionsPanel;
     private JTextField widthInputField;

@@ -73,7 +73,7 @@ public class Background {
     public void setColors(List<Color> colors) { colorList.addAll(colors); }
 
     /***
-     * Allows the user to set the desired shpae
+     * Allows the user to set the desired shape
      * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
      */
     public void setShape( ShapeEnum s ){

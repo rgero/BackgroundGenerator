@@ -3,7 +3,6 @@ package net.roymond.BackgroundUI;
 import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -11,7 +10,7 @@ import java.net.URL;
  * The projects Help > About
  * Created by Roymond on 2/14/2017.
  */
-public class AboutDisplay {
+class AboutDisplay {
     JPanel About;
     private JEditorPane editPane;
     private JButton sourceCodeButton;

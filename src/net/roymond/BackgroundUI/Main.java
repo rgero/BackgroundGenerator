@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
 

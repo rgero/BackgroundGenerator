@@ -13,9 +13,6 @@ import java.awt.*;
 class ColorPanel extends JPanel {
 
     private JLabel colorName;
-    private JLabel red;
-    private JLabel green;
-    private  JLabel blue;
     private JTextField redTextField;
     private JTextField greenTextField;
     private JTextField blueTextField;
@@ -24,16 +21,16 @@ class ColorPanel extends JPanel {
 
         setLayout(new FlowLayout());
         this.colorName = new JLabel(colorName);
-        red = new JLabel("R");
+        JLabel red = new JLabel("R");
         redTextField = new JTextField();
         redTextField.setSize(50,20);
         redTextField.setPreferredSize(new Dimension(50,20));
 
-        green = new JLabel("G");
+        JLabel green = new JLabel("G");
         greenTextField = new JTextField();
         greenTextField.setSize(50,20);
         greenTextField.setPreferredSize(new Dimension(50,20));
-        blue = new JLabel("B");
+        JLabel blue = new JLabel("B");
         blueTextField = new JTextField();
         blueTextField.setSize(50,20);
         blueTextField.setPreferredSize(new Dimension(50,20));
@@ -46,7 +43,7 @@ class ColorPanel extends JPanel {
         blueField.setDocumentFilter(new IntFilter());
 
         this.add(this.colorName);
-        this.add(this.red);
+        this.add(red);
         this.add(redTextField);
         this.add(green);
         this.add(greenTextField);
