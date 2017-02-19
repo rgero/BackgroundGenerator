@@ -25,7 +25,7 @@ public class Main {
 
         JMenu menu = new JMenu("Help");
         menu.setMnemonic(KeyEvent.VK_A);
-        menu.getAccessibleContext().setAccessibleDescription("The About lives here");
+        menu.getAccessibleContext().setAccessibleDescription("Help Menu");
 
         Action aboutAction = new AbstractAction("About Menu") {
 
