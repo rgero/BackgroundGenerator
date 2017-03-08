@@ -77,7 +77,16 @@ public class Background {
      * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
      */
     public void setShape( ShapeEnum s ){
-        chosenShape = s;
+        try{
+            chosenShape = s;
+        } catch (Exception e){
+            chosenShape = ShapeEnum.NONE;
+        }
+
+    }
+
+    ShapeEnum getShape(){
+        return chosenShape;
     }
 
     /***
@@ -207,7 +216,7 @@ public class Background {
     /***
      * Generates a background image based on Diamonds
      */
-    private List<Shape> processDiamondList(){
+    List<Shape> processDiamondList(){
         List<Shape> diamondList = new ArrayList<>();
         int posX=0;
         int posY=0;
@@ -237,7 +246,7 @@ public class Background {
     }
 
     //Processes the rectangles
-    private List<Shape> processRectangleList(){
+    List<Shape> processRectangleList(){
         List<Shape> squareList = new ArrayList<>();
         int posX=0;
         int posY=0;
@@ -253,7 +262,7 @@ public class Background {
     }
 
     //Generates the triangles
-    private List<Shape> processTriangleList(){
+    List<Shape> processTriangleList(){
         List<Shape> triangleList = new ArrayList<>();
         int posX=0;
         int posY=0;
