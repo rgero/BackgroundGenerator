@@ -72,6 +72,10 @@ public class Background {
 
     public void setColors(List<Color> colors) { colorList.addAll(colors); }
 
+    public void clearColors(){
+        colorList.clear();
+    }
+
     /***
      * Allows the user to set the desired shape
      * @param s - the enumerated shape, current values are SQUARE, TRIANGLE, DIAMOND, NONE
@@ -302,7 +306,7 @@ public class Background {
         return triangleList;
     }
 
-    private boolean validateValues(){
+    boolean validateValues(){
         boolean retVal = true;
         if(!baseImage) {
             if (colorList.size() < 2 | objWidth <= 0 | objHeight <= 0) {
