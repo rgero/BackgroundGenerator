@@ -72,6 +72,9 @@ public class Background {
 
     public void setColors(List<Color> colors) { colorList.addAll(colors); }
 
+    /***
+     * This clears the color list. This is because the other two methods just add new colors, we never get to clear them.
+     */
     public void clearColors(){
         colorList.clear();
     }
