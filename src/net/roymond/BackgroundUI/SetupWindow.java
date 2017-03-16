@@ -75,7 +75,6 @@ class SetupWindow {
 
         customDetails.setVisible(false); //This is false by default because the checkbox is not selected.
         loadCustom.addActionListener(e -> {
-            System.out.println(loadCustom.isSelected());
             if (loadCustom.isSelected()){
                 customDetails.setVisible(true);
                 toggleReadOnlyOptions();
