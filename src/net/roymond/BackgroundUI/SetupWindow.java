@@ -75,6 +75,7 @@ class SetupWindow {
 
         customDetails.setVisible(false); //This is false by default because the checkbox is not selected.
         loadCustom.addActionListener(e -> {
+            System.out.println(loadCustom.isSelected());
             if (loadCustom.isSelected()){
                 customDetails.setVisible(true);
                 toggleReadOnlyOptions();
@@ -266,7 +267,7 @@ class SetupWindow {
                 errorMessage += "The height of your shape must be greater than zero.\n";
                 errors = true;
             }
-
+        } else {
             if( sourceImage == null){
                 errorMessage += "Shape Type Error - None is selected, but no source image is loaded.\n";
                 errors = true;
