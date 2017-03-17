@@ -140,6 +140,7 @@ class SetupWindow {
             imageTextField.setText("");
             if ( loadCustom.isSelected() ){
                 toggleReadOnlyOptions();
+                customDetails.setVisible(true);
             }
             loadCustom.setSelected(false);
             for( ColorPanel i : listOfColorPanels){
