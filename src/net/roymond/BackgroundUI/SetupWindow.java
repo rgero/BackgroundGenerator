@@ -137,6 +137,11 @@ class SetupWindow {
             outlineToleranceTextField.setText("");
             directoryTextField.setText("");
             fileNameField.setText("");
+            imageTextField.setText("");
+            if ( loadCustom.isSelected() ){
+                toggleReadOnlyOptions();
+            }
+            loadCustom.setSelected(false);
             for( ColorPanel i : listOfColorPanels){
                 i.clear();
             }
