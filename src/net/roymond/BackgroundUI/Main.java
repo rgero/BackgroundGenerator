@@ -53,6 +53,7 @@ class Main {
         frame.pack();
         frame.setVisible(true);
         frame.setIconImage(img);
+        frame.setResizable(false);
 
     }
 
