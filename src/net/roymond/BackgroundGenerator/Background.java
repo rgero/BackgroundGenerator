@@ -378,10 +378,10 @@ public class Background {
         this.fileName = file;
     }
 
-    public void export(){
+    public boolean export(){
         if (!validateValues()){
             System.out.println("Invalid Values, Aborting");
-            return;
+            return false;
         }
         long currentTime = System.currentTimeMillis();
         String fileExtension = "png";
@@ -411,8 +411,10 @@ public class Background {
         graphic.drawImage(img, null, 0, 0);
         try {
             ImageIO.write(img, fileExtension, outputFile);
+            return true;
         } catch (IOException e) {
             e.printStackTrace();
+            return false;
         }
     }
 

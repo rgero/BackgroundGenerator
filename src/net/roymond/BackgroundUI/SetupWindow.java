@@ -301,8 +301,11 @@ class SetupWindow {
             bg.setDistortion(maxDistortion);
             bg.setOutlineRange(outlineTolerance);
             bg.generate();
-            bg.export();
-            JOptionPane.showMessageDialog(null, "Your image has successfully been exported.", "Export Complete!", JOptionPane.INFORMATION_MESSAGE);
+            if (bg.export()) {
+                JOptionPane.showMessageDialog(null, "Your image has successfully been exported.", "Export Complete!", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Export failed!", "Export failed!", JOptionPane.ERROR_MESSAGE);
+            }
         } else {
             JOptionPane.showMessageDialog(null, errorMessage, "Error(s) when attempting export", JOptionPane.ERROR_MESSAGE);
         }
