@@ -187,18 +187,26 @@ class SetupWindow {
 
             // Verify Width and Height
             try {
-                width = Integer.valueOf( widthInputField.getText() );
-                if (width <= 0 ){
-                    throw new Exception("Invalid value");
+                if (!widthInputField.getText().equals("")) {
+                    width = Integer.valueOf(widthInputField.getText());
+                    if (width <= 0) {
+                        throw new Exception("Invalid value");
+                    }
+                } else {
+                    width = 0;
                 }
             } catch (Exception e){
                 errorMessage += "The width of your image must be greater than zero.\n";
                 errors = true;
             }
             try {
-                height = Integer.valueOf( heightInputField.getText() );
-                if (height <= 0 ){
-                    throw new Exception("Invalid value");
+                if (!heightInputField.getText().equals("")) {
+                    height = Integer.valueOf(heightInputField.getText());
+                    if (height <= 0) {
+                        throw new Exception("Invalid value");
+                    }
+                } else {
+                    height = 0;
                 }
             } catch (Exception e){
                 errorMessage += "The height of your image must be greater than zero.\n";
@@ -232,9 +240,13 @@ class SetupWindow {
 
         // Verify Distortion
         try {
-            maxDistortion = Integer.valueOf( distortionTextField.getText() );
-            if (maxDistortion < 0 ){
-                throw new Exception("Invalid value");
+            if (!distortionTextField.getText().equals("")) {
+                maxDistortion = Integer.valueOf(distortionTextField.getText());
+                if (maxDistortion < 0) {
+                    throw new Exception("Invalid value");
+                }
+            } else {
+                maxDistortion = 0;
             }
         } catch (Exception e){
             errorMessage += "The distortion of your image must be greater than or equal to zero.\n";
@@ -243,9 +255,13 @@ class SetupWindow {
 
         //Verify Outline Tolerance
         try {
-            outlineTolerance = Integer.valueOf( outlineToleranceTextField.getText() );
-            if (outlineTolerance < 0 ){
-                throw new Exception("Invalid value");
+            if (!outlineToleranceTextField.getText().equals("")) {
+                outlineTolerance = Integer.valueOf(outlineToleranceTextField.getText());
+                if (outlineTolerance < 0) {
+                    throw new Exception("Invalid value");
+                }
+            } else {
+                outlineTolerance = 0;
             }
         } catch (Exception e){
             errorMessage += "The outline tolerance of your image must be greater than or equal to zero.\n";
@@ -309,11 +325,6 @@ class SetupWindow {
         } else {
             JOptionPane.showMessageDialog(null, errorMessage, "Error(s) when attempting export", JOptionPane.ERROR_MESSAGE);
         }
-
-
-
-
-
     }
 
     private void toggleReadOnlyOptions(){
@@ -326,7 +337,6 @@ class SetupWindow {
         }
 
     }
-
 
     private void updateColorList(){
         int desiredColors = (int)numberOfColorsField.getValue();

@@ -55,9 +55,21 @@ class ColorPanel extends JPanel {
     Color getColorValues(){
         int red, green, blue;
         try {
-            red = Integer.valueOf( redTextField.getText() );
-            green = Integer.valueOf( greenTextField.getText() );
-            blue = Integer.valueOf( blueTextField.getText() );
+            if (!redTextField.getText().equals("")) {
+                red = Integer.valueOf(redTextField.getText());
+            } else {
+                red = 0;
+            }
+            if (!greenTextField.getText().equals("")) {
+                green = Integer.valueOf( greenTextField.getText() );
+            } else {
+                green = 0;
+            }
+            if (!blueTextField.getText().equals("")) {
+                blue = Integer.valueOf( blueTextField.getText() );
+            } else {
+                blue = 0;
+            }
             if (red > 255 | red < 0 ){
                 throw new Exception (String.format( "%s - Your red value must be between 0 and 255", this.colorName));
             }

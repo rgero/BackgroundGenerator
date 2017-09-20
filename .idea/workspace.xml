@@ -6,9 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Changed the export function to return a boolean that tells whether or not it has been successful.">
+    <list default="true" id="d4740f4a-03ed-4d32-ac41-9abdf2216f4a" name="Default" comment="Adding a bunch of conditions that check whether or not values are entered. If they are not entered, then they should be zero.">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" afterPath="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
     </list>
     <ignored path="ShapedImages.iws" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="SetupWindow.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
-              <caret line="306" column="113" lean-forward="false" selection-start-line="306" selection-start-column="113" selection-end-line="306" selection-end-column="113" />
+            <state relative-caret-position="188">
+              <caret line="219" column="33" lean-forward="false" selection-start-line="219" selection-start-column="33" selection-end-line="219" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -47,8 +47,8 @@
       <file leaf-file-name="BackgroundTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/BackgroundTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state relative-caret-position="1365">
+              <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -57,8 +57,28 @@
       <file leaf-file-name="Background.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="808">
+            <state relative-caret-position="2593">
               <caret line="416" column="25" lean-forward="false" selection-start-line="416" selection-start-column="25" selection-end-line="416" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ColorPanel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-536">
+              <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -83,10 +103,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>width</find>
       <find>startsWith</find>
       <find>Square</find>
       <find>None</find>
+      <find>color</find>
+      <find>width</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,10 +147,10 @@
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/ShapeEnum.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/Resources/about.html" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.form" />
-        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/BackgroundTest.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java" />
+        <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java" />
         <option value="$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java" />
       </list>
     </option>
@@ -137,8 +158,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1618" />
-    <option name="height" value="1184" />
+    <option name="width" value="1938" />
+    <option name="height" value="1064" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -155,26 +176,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -192,11 +212,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -218,11 +238,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -240,11 +260,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -262,11 +282,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="BackgroundGenerator_2017" />
+              <option name="myItemId" value="BackgroundGenerator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -274,10 +294,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackgroundGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackgroundGenerator" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="out" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShapedImages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,6 +340,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\gero\Personal_Projects\Java\BackgroundGenerator_2017\src\net\roymond\BackgroundUI" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -366,6 +421,34 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -806,25 +889,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1618" height="1184" extended-state="6" />
-    <editor active="false" />
+    <frame x="-9" y="-9" width="1938" height="1064" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2831268" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2831001" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2907531" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29063508" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983795" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19114584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -853,7 +936,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added a lot of comments to the background class." />
     <MESSAGE value="Added the &quot;getCenter&quot; function for the shapes. This functionality is needed so I can later get the color of an existing image at the center of that shape." />
     <MESSAGE value="Added the baseImage member as well as some functions for setting and clearing it. This member allows me to use the base image as a color palette for the background generator." />
     <MESSAGE value="Made the appropriate constructors and functions public so I can write tests for them." />
@@ -878,14 +960,15 @@
     <MESSAGE value="Setting the customDetails view to not visible upon clear." />
     <MESSAGE value="Adding a success message so the user knows the export was successful." />
     <MESSAGE value="Changed the export function to return a boolean that tells whether or not it has been successful." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the export function to return a boolean that tells whether or not it has been successful." />
+    <MESSAGE value="Adding a bunch of conditions that check whether or not values are entered. If they are not entered, then they should be zero." />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a bunch of conditions that check whether or not values are entered. If they are not entered, then they should be zero." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java</url>
-          <line>289</line>
+          <line>305</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -1148,14 +1231,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1487364486484.png" />
     <entry file="file://$PROJECT_DIR$/1487364467038.png" />
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/AboutDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1179,14 +1254,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/1485311664904.png" />
     <entry file="file://$PROJECT_DIR$/1485915355570.png" />
-    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.form">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1200,24 +1267,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/BackgroundTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="68" column="5" lean-forward="true" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+        <state relative-caret-position="1365">
+          <caret line="68" column="5" lean-forward="false" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundGenerator/Background.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
+        <state relative-caret-position="2593">
           <caret line="416" column="25" lean-forward="false" selection-start-line="416" selection-start-column="25" selection-end-line="416" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="59" column="1" lean-forward="false" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/ColorPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-536">
+          <caret line="59" column="20" lean-forward="true" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/roymond/BackgroundUI/SetupWindow.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="306" column="113" lean-forward="false" selection-start-line="306" selection-start-column="113" selection-end-line="306" selection-end-column="113" />
+        <state relative-caret-position="188">
+          <caret line="219" column="33" lean-forward="false" selection-start-line="219" selection-start-column="33" selection-end-line="219" selection-end-column="33" />
           <folding />
         </state>
       </provider>
